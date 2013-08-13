@@ -20,18 +20,18 @@ Template Name: downtown
         position:absolute; top:0;bottom:0; left: -1; width:100%;z-index:-1;
       }  
 
-      .marker-tooltip h1{
+      .marker-popup h1{
         font-family: sans-serif;
         font-size: 18px;
         font-weight: 800;
       } 
 
-      .marker-tooltip p {
+      .marker-popup p {
         font-size: 12px;
         font-family: sans-serif;
         font-weight: 200;
       }
-      .marker-tooltip a{
+      .marker-popup a{
         text-decoration: none;
         color: #ff00b1;
       }
