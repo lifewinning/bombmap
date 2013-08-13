@@ -66,7 +66,7 @@ function mapData(f) {
         
         var p = '<p style=text-align:center;><img src=' + feature.properties.image + ' style= max-width:60%;></p>';
         
-        var q = feature.properties.address + '<br><a href=http://'+ feature.properties.website + '>'+ feature.properties.website + '</a><br/>'+ feature.properties.phone + '</p>';
+        var q = '<p>' + feature.properties.address + '<br><a href=http://'+ feature.properties.website + '>'+ feature.properties.website + '</a><br/>'+ feature.properties.phone + '</p>';
         
         var r = '<hr><p>' + feature.properties.schedule + '</p>';
 
