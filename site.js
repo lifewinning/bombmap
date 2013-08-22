@@ -23,7 +23,7 @@ m.ui.attribution.add()
 m.centerzoom({
  lat: 40.72189,
         lon: -73.99927
-        }, 15);
+        }, 14);
 m.setZoomRange(12, 18);
 //m.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
 
@@ -46,7 +46,7 @@ function mapData(f) {
             var markerwindow = $('.marker-popup').height();
             console.log(markerwindow);
             m.ease.location({
-              lat: n.geometry.coordinates[1]+(markerwindow/100000),
+              lat: n.geometry.coordinates[1],
               lon: n.geometry.coordinates[0]
             }).zoom(m.zoom()).optimal();
         
@@ -66,7 +66,7 @@ function mapData(f) {
         
         var p = '<p style=text-align:center;><img src=' + feature.properties.image + ' style= max-width:60%;></p>';
         
-        var q = '<p>' + feature.properties.address + '<br><a href=http://'+ feature.properties.website + '>'+ feature.properties.website + '</a><br/>'+ feature.properties.phone + '</p>';
+        var q = feature.properties.address + '<br><a href=http://'+ feature.properties.website + '>'+ feature.properties.website + '</a><br/>'+ feature.properties.phone + '</p>';
         
         var r = '<hr><p>' + feature.properties.schedule + '</p>';
 
@@ -80,6 +80,34 @@ function mapData(f) {
         }
        
     });
+
+//legend zooms
+
+document.getElementById('zoomout').onclick=function(){
+    m.ease.location({lat: 40.72189, lon: -73.99927}).zoom(14).optimal();
+    return false;
+}
+
+document.getElementById('blackston').onclick=function(){
+    m.ease.location({lat: 40.7187082, lon: -73.9890559}).zoom(18).optimal();
+    return false;
+}
+
+document.getElementById('dodge').onclick=function(){
+    m.ease.location({lat: 40.721254, lon: -73.9925553}).zoom(18).optimal();
+    return false;
+}
+
+document.getElementById('elevenrivington01').onclick=function(){
+    m.ease.location({lat:   40.721428893717984, lon: -73.9925444126129}).zoom(18).optimal();
+    return false;
+    }
+
+document.getElementById('elevenrivington02').onclick=function(){
+    m.ease.location({lat: 40.722069, lon: -73.99206}).zoom(18).optimal();
+    return false;
+    }
+
 
 }
 
