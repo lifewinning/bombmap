@@ -65,7 +65,7 @@ function mmg_google_docs_spreadsheet(id, sheet, callback) {
             if (feature.geometry.coordinates.length == 2) features.push(feature);
 
             _.each(feature, function(value, key) {
-                if(feature.properties['color']=="pink"){feature.properties['marker-color']='#ff00b1'} 
+                if(feature.properties['color']=="pink"){feature.properties['marker-color']='#ff00b1', feature.properties['marker-size']='medium'} 
                 if(feature.properties['color']=="black"){feature.properties['marker-color']='#000000'}
                 
             });

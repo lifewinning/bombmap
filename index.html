@@ -33,8 +33,9 @@
       .marker-popup{
         -moz-border-radius: 10%;
         border-radius: 10%;
-
-
+      
+      }
+      .marker-tooltip{
       }
 
 #key{
@@ -43,7 +44,9 @@
   left: 0px;
   padding: 15px;
   margin: 10px;
-  width: 33.333%;
+  width: 25%;
+  height: 85%;
+  overflow: auto;
   background-color: white;
   border: 1px solid #ff00b1;
   -moz-box-shadow: 5px 5px 5px #ff00b1;
@@ -54,6 +57,14 @@
   color: #ff00b1;
   font-weight: 800;
   font-size: 2em;
+}
+#key li{
+  font-size: 1em;
+  text-transform: none;
+}
+#key li a {
+  font-size: 1.1em;
+  text-transform: none;
 }
 #key a{
   color: #ff00b1;
@@ -69,25 +80,44 @@
 <h1>Bomb Downtown Gallery Guide</h1>
 <p>Click on the markers for more details about galleries. Click on the list below to zoom in to specific galleries. <a href="#" id='zoomout'>Click here to zoom back out.</a></p>
 <hr>
-<a href="#" id='blackston'><h3>1. Blackston Gallery</h3></a>
+<ol>
+  <li><a href="#" id='blackston'>Blackston Gallery</a><br>29C Ludlow Street</li>
+  <li><a href="#" id='dodge'>DODGE Gallery</a><br>15 Rivington Street</li>
 
-<a href="#" id='dodge'><h3>2. DODGE Gallery</h3></a>
-
-<a href="#" id='elevenrivington01'><h3>3. Eleven Rivington (11 Rivington Street)</h3></a> 
-
-<a href="#" id='elevenrivington02'><h3>3. Eleven Rivington (195 Chrystie Street)</h3></a>
-
-<a href="#"><span id="featureinc"><h3>4. Feature Inc.</h3></span></a>
-
-<a href="#"><span id="lesleyheller"><h3>5. Lesley Heller Workspace</h3></span></a>
-
-<a href="#"><span id="nyaa"><h3>6. New York Academy of Art</h3></span></a>
-
-<a href="#"><span id="participant"><h3>7. Participant Inc.</h3></span></a>
-<a href="#"><span id="rfeldman"><h3>8. Ronald Feldman Fine Arts</h3></span></a>
+  <li><a href="#" id='elevenrivington01'>Eleven Rivington</a><br>11 Rivington Street</li>
+  
+  <li><a href="#" id='elevenrivington02'>Eleven Rivington</a><br>195 Chrystie Street</li>
+  
+  <li><a href="#" id="featureinc">Feature Inc.</a><br>131 Allen Street</li>
+  
+  <li><a href="#" id="lesleyheller">Lesley Heller Workspace</a><br>54 Orchard Street</li>
+  
+  <li><a href="#" id="nyaa">New York Academy of Art</a><br>111 Franklin Street</li>
+  <li><a href="#" id="participant">Participant Inc.</a><br>253 East Houston Street</li>
+  <li><a href="#" id="rfeldman">Ronald Feldman Fine Arts</a><br>31 Mercer Street</li>
+</ol>
 <hr>
-<a href="#" id="nawa" style="color: black;"><h3>1.The National Association of Women Artists, Inc.</h3></a>
-<a href="#" id="kerrys" style="color: black;"><h3>2. Kerry Schuss</h3></a>
+<ol>
+  <li><a href="#" id="nawa" style="color: black;">The National Association of Women Artists, Inc.</a><br>80 Fifth Avenue, Suite 1405</li>
+  <li><a href="#" id="kerrys" style="color: black;">Kerry Schuss</a><br>34 Orchard Street</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
 </div>   
 
 

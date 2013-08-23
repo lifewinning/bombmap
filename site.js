@@ -81,7 +81,7 @@ function mapData(f) {
        
     });
 
-//legend zooms
+//legend zooms that are tediously hardcoded and should probably be tied directly to the marker data
 
 document.getElementById('zoomout').onclick=function(){
     m.ease.location({lat: 40.72189, lon: -73.99927}).zoom(14).optimal();
@@ -89,7 +89,7 @@ document.getElementById('zoomout').onclick=function(){
 }
 
 document.getElementById('blackston').onclick=function(){
-    m.ease.location({lat: 40.7187082, lon: -73.9890559}).zoom(18).optimal();
+    m.ease.location({lat: 40.716135, lon: -73.990644}).zoom(18).optimal();
     return false;
 }
 
@@ -99,7 +99,7 @@ document.getElementById('dodge').onclick=function(){
 }
 
 document.getElementById('elevenrivington01').onclick=function(){
-    m.ease.location({lat:   40.721428893717984, lon: -73.9925444126129}).zoom(18).optimal();
+    m.ease.location({lat:   40.721494, lon: -73.992524}).zoom(18).optimal();
     return false;
     }
 
@@ -108,6 +108,38 @@ document.getElementById('elevenrivington02').onclick=function(){
     return false;
     }
 
+document.getElementById('featureinc').onclick=function(){
+    m.ease.location({lat: 40.7198026, lon: -73.9894884}).zoom(18).optimal();
+    return false;
+    }
+
+document.getElementById('lesleyheller').onclick=function(){
+    m.ease.location({lat: 40.717013, lon: -73.990958}).zoom(18).optimal();
+    return false;
+    }
+
+document.getElementById('nyaa').onclick=function(){
+    m.ease.location({lat: 40.7184651428571, lon: -74.0059435714286}).zoom(18).optimal();
+    return false;
+    }
+document.getElementById('participant').onclick=function(){
+    m.ease.location({lat: 40.7217946666667, lon: -73.98518225}).zoom(18).optimal();
+    return false;
+    }
+document.getElementById('rfeldman').onclick=function(){
+    m.ease.location({lat: 40.722069, lon: -74.0017456}).zoom(18).optimal();
+    return false;
+    }
+
+document.getElementById('nawa').onclick=function(){
+    m.ease.location({lat: 40.736186, lon: -73.993824}).zoom(18).optimal();
+    return false;
+    }
+
+document.getElementById('kerrys').onclick=function(){
+    m.ease.location({lat: 40.71617, lon: -73.99131}).zoom(18).optimal();
+    return false;
+    }
 
 }
 
