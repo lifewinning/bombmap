@@ -35,24 +35,24 @@ function mapData(f) {
 
 
   //center markers layer
-    markerLayer.factory(function (n) {
-        // Create a marker using the simplestyle factory
-        var elem = mapbox.markers.simplestyle_factory(n);
-        // Add function that centers marker on click
-        MM.addEvent(elem, 'click', function(e) {
-            //trying to figure out centering against markerwindow height as well, come back to this later
-            //var markerwindow = $('.marker-popup').height();
-            //console.log(markerwindow);
-            m.ease.location({
-              lat: n.geometry.coordinates[1],
-              lon: n.geometry.coordinates[0]
-            }).zoom(m.zoom()).optimal();
+    // markerLayer.factory(function (n) {
+    //     // Create a marker using the simplestyle factory
+    //     var elem = mapbox.markers.simplestyle_factory(n);
+    //     // Add function that centers marker on click
+    //     MM.addEvent(elem, 'click', function(e) {
+    //         //trying to figure out centering against markerwindow height as well, come back to this later
+    //         //var markerwindow = $('.marker-popup').height();
+    //         //console.log(markerwindow);
+    //         m.ease.location({
+    //           lat: n.geometry.coordinates[1],
+    //           lon: n.geometry.coordinates[0]
+    //         }).zoom(m.zoom()).optimal();
         
-        });
-        return elem;
+    //     });
+    //     return elem;
 
 
-    });
+    // });
 
     interaction = mapbox.markers.interaction(markerLayer);
     m.addLayer(markerLayer);
