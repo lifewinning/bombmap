@@ -3,7 +3,6 @@
 
 var data_id = '0AkuokbMVYNRxdEFPeFBZdkY0S05CWUZZcWFfaFpfeGc',
     sheet = 'od6',
-    //map_id = 'lifewinning.map-7nibzgui',
     markerLayer,
     features,
     features_summary,
@@ -25,10 +24,8 @@ m.centerzoom({
         lon: -73.99927
         }, 14);
 m.setZoomRange(12, 18);
-//m.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
 
-
-// center and zoom your map
+// set data with google spreadsheet
 mmg_google_docs_spreadsheet(data_id, sheet, mapData);
 
 // Build map
@@ -43,8 +40,9 @@ function mapData(f) {
         var elem = mapbox.markers.simplestyle_factory(n);
         // Add function that centers marker on click
         MM.addEvent(elem, 'click', function(e) {
-            var markerwindow = $('.marker-popup').height();
-            console.log(markerwindow);
+            //trying to figure out centering against markerwindow height as well, come back to this later
+            //var markerwindow = $('.marker-popup').height();
+            //console.log(markerwindow);
             m.ease.location({
               lat: n.geometry.coordinates[1],
               lon: n.geometry.coordinates[0]
@@ -73,7 +71,7 @@ function mapData(f) {
         var color = feature.properties.color;
 
         if (color=='pink'){
-        return o + p+  q + r;
+        return o + p +  q + r;
         }
         else{
             return o + q;
@@ -94,7 +92,7 @@ document.getElementById('blackston').onclick=function(){
 }
 
 document.getElementById('dodge').onclick=function(){
-    m.ease.location({lat: 40.721254, lon: -73.9925553}).zoom(18).optimal();
+    m.ease.location({lat: 40.721254, lon: -73.9925553333333}).zoom(18).optimal();
     return false;
 }
 
@@ -104,17 +102,17 @@ document.getElementById('elevenrivington01').onclick=function(){
     }
 
 document.getElementById('elevenrivington02').onclick=function(){
-    m.ease.location({lat: 40.722069, lon: -73.99206}).zoom(18).optimal();
+    m.ease.location({lat: 40.7220185454545, lon: -73.9919604545454}).zoom(18).optimal();
     return false;
     }
 
 document.getElementById('featureinc').onclick=function(){
-    m.ease.location({lat: 40.7198026, lon: -73.9894884}).zoom(18).optimal();
+    m.ease.location({lat: 40.719985875, lon: -73.990247875}).zoom(18).optimal();
     return false;
     }
 
 document.getElementById('lesleyheller').onclick=function(){
-    m.ease.location({lat: 40.717013, lon: -73.990958}).zoom(18).optimal();
+    m.ease.location({lat: 40.717156, lon: -73.990958}).zoom(18).optimal();
     return false;
     }
 
@@ -127,7 +125,7 @@ document.getElementById('participant').onclick=function(){
     return false;
     }
 document.getElementById('rfeldman').onclick=function(){
-    m.ease.location({lat: 40.722069, lon: -74.0017456}).zoom(18).optimal();
+    m.ease.location({lat: 40.7210522, lon: -74.0017456}).zoom(18).optimal();
     return false;
     }
 
@@ -137,7 +135,7 @@ document.getElementById('nawa').onclick=function(){
     }
 
 document.getElementById('kerrys').onclick=function(){
-    m.ease.location({lat: 40.71617, lon: -73.99131}).zoom(18).optimal();
+    m.ease.location({lat: 40.716299, lon: -73.991436}).zoom(18).optimal();
     return false;
     }
 
