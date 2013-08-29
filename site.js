@@ -139,6 +139,11 @@ document.getElementById('kerrys').onclick=function(){
     return false;
     }
 
+document.getElementById('stellarrays').onclick=function(){
+    m.ease.location({lat: 40.721563, lon: -73.993076}).zoom(18).optimal();
+    return false;
+    }
+
 }
 
  

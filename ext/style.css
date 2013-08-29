@@ -33,7 +33,7 @@
   padding: 15px;
   margin: 10px;
   width: 25%;
-  max-height: 60%;
+  max-height: 75%
   overflow: auto;
   background-color: white;
   border: 1px solid #ff00b1;
@@ -45,6 +45,10 @@
   color: #ff00b1;
   font-weight: 800;
   font-size: 2em;
+}
+
+#key ol {
+  list-style-type: upper-alpha;
 }
 #key li{
   font-size: 1em;
