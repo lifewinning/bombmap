@@ -40,23 +40,16 @@ function mapData(f) {
         var elem = mapbox.markers.simplestyle_factory(n);
         // Add function that centers marker on click
         MM.addEvent(elem, 'click', function(e) {
+            
             //centering against markerwindow 
 
-            var windowHeight = $(window).height()/2;
-            var windowWidth = $(window).width()/2;
-            var keyWidth = $('#key').width();
             var markerCenterX = $('.marker-popup').height()/2;
             var markerCenterY = $('.marker-popup').width()/2;
-            var markerwindowX = $('.marker-popup').offset().top;
-            var markerwindowY = $('.marker-popup').offset().left;
-
-        
-            //  var markerWindowLatLon = m.pointLocation({ x: markerLat-markerCenterX, y: markerLon-markerCenterY});
-            // }
             var markerpopupHeight= $('.marker-popup').height();
+
             console.log($('.marker-popup').height());
             if ( markerpopupHeight > 400){
-            var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX, y: e.clientY-(markerCenterY+100)});
+            var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX+100, y: e.clientY-(markerCenterY+110)});
             }
             else{
             var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX, y: e.clientY-markerCenterY});
