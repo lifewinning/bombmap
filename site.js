@@ -50,20 +50,23 @@ function mapData(f) {
             var markerwindowX = $('.marker-popup').offset().top;
             var markerwindowY = $('.marker-popup').offset().left;
 
-            var markerLat = (windowHeight - markerwindowX);
-            var markerLon = (windowWidth - markerwindowY);
-
-            var markerWindowLatLon = m.pointLocation({ x: markerLat-markerCenterX, y: markerLon-markerCenterY});
+        
+            //  var markerWindowLatLon = m.pointLocation({ x: markerLat-markerCenterX, y: markerLon-markerCenterY});
+            // }
+            var markerpopupHeight= $('.marker-popup').height();
+            console.log($('.marker-popup').height());
+            if ( markerpopupHeight > 400){
+            var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX, y: e.clientY-(markerCenterY+100)});
+            }
+            else{
+            var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX, y: e.clientY-markerCenterY});
+           }
             
-
-            if (m.zoom() > 16){
-            var markerWindowLatLon = m.pointLocation({ x: markerLat-markerCenterX, y: markerLon-markerCenterY});
-            
-            m.ease.location({
-              lat: markerWindowLatLon.lat,
-              lon: markerWindowLatLon.lon
-            }).zoom(m.zoom()).optimal();
-            }    
+             m.ease.location({
+               lat: markerWindowLatLon.lat,
+               lon: markerWindowLatLon.lon
+             }).zoom(m.zoom()).optimal();
+              
             
         
         });
@@ -80,7 +83,7 @@ function mapData(f) {
     interaction.formatter(function (feature) {
         var o = '<h1>' + feature.properties.name + '</h1><p>';
         
-        var p = '<p style=text-align:center;><img src=' + feature.properties.image + ' style= max-width:60%;></p>';
+        var p = '<p style=text-align:center;><img src=' + feature.properties.image + ' style= max-width:50%;></p>';
         
         var q = feature.properties.address + '<br><a href=http://'+ feature.properties.website + '>'+ feature.properties.website + '</a><br/>'+ feature.properties.phone + '</p>';
         
