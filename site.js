@@ -49,7 +49,7 @@ function mapData(f) {
 
             console.log($('.marker-popup').height());
             if ( markerpopupHeight > 400){
-            var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX+100, y: e.clientY-(markerCenterY+110)});
+            var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX+150, y: e.clientY-(markerCenterY+150)});
             }
             else{
             var markerWindowLatLon = m.pointLocation({x: e.clientX-markerCenterX, y: e.clientY-markerCenterY});
@@ -155,6 +155,10 @@ document.getElementById('kerrys').onclick=function(){
 
 document.getElementById('stellarrays').onclick=function(){
     m.ease.location({lat: 40.721563, lon: -73.993076}).zoom(18).optimal();
+    return false;
+    }
+document.getElementById('abrons').onclick=function(){
+    m.ease.location({lat: 40.715076, lon: -73.983781}).zoom(18).optimal();
     return false;
     }
 
