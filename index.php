@@ -2,8 +2,7 @@
 /*
 Template Name: downtown
 */
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -24,6 +23,7 @@ Template Name: downtown
 <p>Click on the markers for more details about galleries. Click on the list below to zoom in to specific galleries. <a href="#" id='zoomout'>Click here to zoom back out.</a></p>
 <hr>
 <ol>
+  <li><a href="#" id="abrons">Abrons Art Center</a><br>466 Grand Street</li>
   <li><a href="#" id='blackston'>Blackston Gallery</a><br>29C Ludlow Street</li>
   <li><a href="#" id='dodge'>DODGE Gallery</a><br>15 Rivington Street</li>
 
@@ -36,15 +36,17 @@ Template Name: downtown
   <li><a href="#" id="lesleyheller">Lesley Heller Workspace</a><br>54 Orchard Street</li>
   
   <li><a href="#" id="nyaa">New York Academy of Art</a><br>111 Franklin Street</li>
+  <li><a href="#" id="stellarrays">On Stellar Rays</a><br>1 Rivington Street</li>
   <li><a href="#" id="participant">Participant Inc.</a><br>253 East Houston Street</li>
   <li><a href="#" id="rfeldman">Ronald Feldman Fine Arts</a><br>31 Mercer Street</li>
-  <li><a href="#" id="stellarrays">On Stellar Rays</a><br>1 Rivington Street</li>
-   <li><a href="#" id="abrons">Abrons Art Center</a><br>466 Grand Street</li>
+  
+   
 </ol>
 <hr>
 <ol>
-  <li><a href="#" id="nawa" style="color: black;">The National Association of Women Artists, Inc.</a><br>80 Fifth Avenue, Suite 1405</li>
+  
   <li><a href="#" id="kerrys" style="color: black;">Kerry Schuss</a><br>34 Orchard Street</li>
+  <li><a href="#" id="nawa" style="color: black;">The National Association of Women Artists, Inc.</a><br>80 Fifth Avenue, Suite 1405</li>
 </ol>
 
 
