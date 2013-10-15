@@ -1,0 +1,70 @@
+     #map { 
+        position:absolute; top:0; right:0; width:100%;z-index:-1;
+      }  
+
+      .marker-popup h1{
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+      } 
+
+      .marker-popup p {
+        font-size: 12px;
+        font-family: sans-serif;
+        font-weight: 200;
+      }
+      .marker-popup a{
+        text-decoration: none;
+        color: #ff00b1;
+      }
+      .marker-popup{
+        -moz-border-radius: 10%;
+        border-radius: 10%;
+        min-width: 300px;
+      
+      }
+      .marker-tooltip{
+      }
+
+#key{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 15px;
+  margin: 10px;
+  width: 25%;
+  max-height: 75%
+  overflow: auto;
+  background-color: white;
+  border: 1px solid #55ff00;
+  -moz-box-shadow: 5px 5px 5px #55ff00;
+  -webkit-box-shadow: 5px 5px 5px #55ff00;
+  box-shadow: 5px 5px 5px #55ff00;
+}
+#key h1{
+  color: #59d71a;
+  font-weight: 800;
+  font-size: 2em;
+}
+
+#key ol h3 {
+  text-indent: -2em;
+  line-height: 1.5em;
+}
+
+#key ol {
+  list-style-type: upper-alpha;
+}
+#key li{
+  font-size: 1em;
+  text-transform: none;
+}
+#key li a {
+  font-size: 1.1em;
+  text-transform: none;
+}
+#key a{
+  color: #59d71a;
+  font-weight: 800;
+  text-decoration: none;
+}
